@@ -1,2 +1,58 @@
-зощшощшо
 
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "RUS");
+    cout << "Welcome!";
+    double a = 0, b = 0, y = 0;
+    int op = 1;
+    while (op != 0)
+    {
+        cout << endl << "Какую операцию хотите выполнить?(1 - '*'; 2 - '/'; 3 - '+'; 4 - '-'(0 - ВЫХОД) : ";
+        cin >> op;
+        if (op == 0)
+            break;
+        cout << "Введите числа, с которыми проводите операции: " << endl << " NUM 1 : ";
+        cin >> a;
+        cout << "NUM 2 : ";
+        cin >> b;
+        
+        switch (op)
+        {
+        case 1 :
+        {
+            y = a * b;
+            cout << endl << a << " * " << b << " = " << y << endl;
+            break;
+        }
+        case 2 :
+        {
+            y = a / b;
+            cout << endl << a << " / " << b << " = " << y << endl;
+            break;
+        }
+        case 3 :
+        {
+            y = a + b;
+            cout << endl << a << " + " << b << " = " << y << endl;
+            break;
+        }
+        case 4 :
+        {
+            y = a - b;
+            cout << endl << a << " - " << b << " = " << y << endl;
+            break;
+        }
+
+
+        }
+
+
+    }
+
+    return 0;
+}
